@@ -1,10 +1,8 @@
 <script setup>
-
+import sliderComponent from "./components/slider.vue";
 </script>
-
 <template>
- <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam quo amet fugit hic repellendus rem repudiandae, laboriosam veritatis numquam aspernatur!</p>
+  <slider-component></slider-component>
 </template>
-
 <style scoped>
 </style>
