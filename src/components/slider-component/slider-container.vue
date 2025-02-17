@@ -2,17 +2,23 @@
 import sliderItems from './slider-items.vue'
 </script>
 <template>
-    <div class="slider-container">
-        <sliderItems />
-    </div>
+  <div class="slider-container">
+    <sliderItems />
+  </div>
 </template>
 <style lang="scss">
 $main-bg-clr: rgb(7, 140, 248);
-body{
-    .slider-container{
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 100svh;
     background-color: $main-bg-clr;
-    height: 100svh;
-    padding: .5em;
-    }
+  .slider-container {
+    
+  
+    
+    padding: 0.5em;
+  }
 }
 </style>
