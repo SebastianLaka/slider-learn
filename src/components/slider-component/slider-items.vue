@@ -5,7 +5,6 @@
     </p>
    
 </template>
-
 <style lang="scss">
 $main-bg-clr: rgb(7, 140, 248);
 $main-font-clr: rgb(0, 0, 0);
