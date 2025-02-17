@@ -1,11 +1,6 @@
 <script setup>
-import sliderItems from "./slider-items.vue";
+import sliderContainer from "./slider-container.vue";
 </script>
 <template>
-   <sliderItems />
-   
+   <sliderContainer/>
 </template>
-
-<style lang="scss">
-
-</style>
