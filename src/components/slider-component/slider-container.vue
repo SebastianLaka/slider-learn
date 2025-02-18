@@ -12,13 +12,12 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    max-height: 100svh;
+    height: 100svh;
     background-color: $main-bg-clr;
+    padding: 1em;
   .slider-container {
-    
-  
-    
-    padding: 0.5em;
+    display: flex;
+    max-height: 35em;
   }
 }
 </style>
