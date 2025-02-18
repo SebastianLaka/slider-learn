@@ -1,6 +1,7 @@
 <template>
   <div class="slider-container">
     <img class="slider-container__image" src="../img/dodge-viper.jpg" alt="Dodge Viper SRT-10" />
+    <sliderButtons/>
   </div>
 </template>
 <style lang="scss">
@@ -13,8 +14,10 @@ body {
   background-color: $main-bg-clr;
   padding: 1em;
   .slider-container {
+    position: relative;
     display: flex;
     max-height: 35em;
+   
     &__image {
       object-fit: contain;
       max-height: 35em;
@@ -23,4 +26,5 @@ body {
 }
 </style>
 <script setup>
+import sliderButtons from "./slider-controls.vue";
 </script>
