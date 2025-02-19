@@ -18,6 +18,10 @@
         border: none;
         background-color: rgba(0,0,0, .5);
         cursor: pointer;
+        transition: background-color .3s ease-in-out;
+    }
+    &__left:hover, &__right:hover{
+        background-color: transparent;
     }
 }
 </style>
