@@ -22,7 +22,7 @@ body {
     z-index: 0;
     .img-area {
       position: absolute;
-      background-image: url(../img/porsche-911-dakkar.jpg);
+      background-image: url(@/assets/img/porsche-911-dakkar.jpg);
       background-size: cover;
       background-position: center center;
       background-repeat: no-repeat;
