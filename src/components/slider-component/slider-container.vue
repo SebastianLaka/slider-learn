@@ -1,6 +1,6 @@
 <template>
   <div class="slider-container">
-    <div class="img-area" :style="{ backgroundImage: `url(${images.img[currentImage]})` }"  v-if="images.length > 0">
+    <div class="img-area" :style="{ backgroundImage: `url(${images.img})` }">
       <sliderButtons />
     </div>
   </div>
@@ -44,26 +44,24 @@ export default {
     return {
       images: [
       {
-        img: import.meta.glob('@/assets/img/porsche-911-dakkar.jpg'),
+        img: ('@/assets/img/porsche-911-dakkar.jpg'),
           id: "1",
         },
         {
-          img:  import.meta.glob('@/assets/img/dodge-viper.jpg'),
+          img:  ('@/assets/img/dodge-viper.jpg'),
           id: "2",
         },
         {
-          img: import.meta.glob('@/assets/img/nissan-370z.jpg'),
+          img: ('@/assets/img/nissan-370z.jpg'),
           id: "3",
         },
         {
-          img: import.meta.glob('@/assets/img/kia-stinger.jpg'),
+          img: ('@/assets/img/kia-stinger.jpg'),
           id: "4",
         },
       ],
       currentImage: 0
     };
-    
   },
-
 }
 </script>
