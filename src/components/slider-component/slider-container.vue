@@ -1,6 +1,6 @@
 <template>
   <div class="slider-container">
-    <div class="img-area" :style="{ backgroundImage: `url(${images.img})` }">
+    <div class="img-area" :style="{ backgroundImage: `url(${images[currentImage].img})` }">
       <sliderButtons />
     </div>
   </div>
