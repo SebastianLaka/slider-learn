@@ -1,6 +1,6 @@
 <template>
   <div class="slider-container">
-    <div class="img-area">
+    <div class="img-area" :style="{ backgroundImage: `url(${images.img})` }">
       <sliderButtons />
     </div>
   </div>
@@ -22,7 +22,6 @@ body {
     z-index: 0;
     .img-area {
       position: absolute;
-      background-image: url(@/assets/img/porsche-911-dakkar.jpg);
       background-size: cover;
       background-position: center center;
       background-repeat: no-repeat;
@@ -34,6 +33,21 @@ body {
   }
 }
 </style>
-<script setup>
-import sliderButtons from './slider-controls.vue'
+<script>
+import sliderButtons from './slider-controls.vue';
+export default {
+  components: {
+    sliderButtons,
+  },
+  data() {
+    return {
+      images: [
+        { img: '@/assets/img/porsche-911-dakkar.jpg', id: '1' },
+        { img: '@/assets/img/dodge-viper.jpg', id: '2' },
+        { img: '@/assets/img/nissan-370z.jpg', id: '3' },
+        { img: '@/assets/img/kia-stinger.jpg', id: '4' },
+      ],
+    }
+  },
+}
 </script>
