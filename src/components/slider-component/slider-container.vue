@@ -1,6 +1,6 @@
 <template>
   <div class="slider-container">
-    <div class="img-area" :style="{ backgroundImage: `url(${images.img})` }">
+    <div class="img-area" :style="{ backgroundImage: `url(${images.img[currentImage]})` }"  v-if="images.length > 0">
       <sliderButtons />
     </div>
   </div>
@@ -22,6 +22,7 @@ body {
     z-index: 0;
     .img-area {
       position: absolute;
+      // background-image: url('@/assets/img/porsche-911-dakkar.jpg');
       background-size: cover;
       background-position: center center;
       background-repeat: no-repeat;
@@ -34,7 +35,7 @@ body {
 }
 </style>
 <script>
-import sliderButtons from './slider-controls.vue';
+import sliderButtons from './slider-controls.vue'
 export default {
   components: {
     sliderButtons,
@@ -42,12 +43,27 @@ export default {
   data() {
     return {
       images: [
-        { img: '@/assets/img/porsche-911-dakkar.jpg', id: '1' },
-        { img: '@/assets/img/dodge-viper.jpg', id: '2' },
-        { img: '@/assets/img/nissan-370z.jpg', id: '3' },
-        { img: '@/assets/img/kia-stinger.jpg', id: '4' },
+      {
+        img: import.meta.glob('@/assets/img/porsche-911-dakkar.jpg'),
+          id: "1",
+        },
+        {
+          img:  import.meta.glob('@/assets/img/dodge-viper.jpg'),
+          id: "2",
+        },
+        {
+          img: import.meta.glob('@/assets/img/nissan-370z.jpg'),
+          id: "3",
+        },
+        {
+          img: import.meta.glob('@/assets/img/kia-stinger.jpg'),
+          id: "4",
+        },
       ],
-    }
+      currentImage: 0
+    };
+    
   },
+
 }
 </script>
