@@ -34,7 +34,9 @@ body {
 }
 </style>
 <script>
-import sliderButtons from './slider-controls.vue'
+import sliderButtons from './slider-controls.vue';
+import { ref } from 'vue';
+const currentImage = ref(0);
 export default {
   components: {
     sliderButtons,
@@ -59,7 +61,7 @@ export default {
           id: "4",
         },
       ],
-      currentImage: 0
+      currentImage
     };
   },
 }
