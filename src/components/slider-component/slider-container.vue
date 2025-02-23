@@ -1,6 +1,6 @@
 <template>
   <div class="slider-container">
-    <div class="img-area" :style="{ backgroundImage: `url(${+ images[currentImage].img})` }">
+    <div class="img-area" :style="{ backgroundImage: `url(${ images[currentImage].img})` }">
       <sliderButtons />
     </div>
   </div>
@@ -43,19 +43,19 @@ export default {
     return {
       images: [
       {
-        img: ('@/assets/img/porsche-911-dakkar.jpg'),
+        img: ('src/assets/img/porsche-911-dakkar.jpg'),
           id: "1",
         },
         {
-          img:  ('@/assets/img/dodge-viper.jpg'),
+          img:  ('src/assets/img/dodge-viper.jpg'),
           id: "2",
         },
         {
-          img: ('@/assets/img/nissan-370z.jpg'),
+          img: ('src/assets/img/nissan-370z.jpg'),
           id: "3",
         },
         {
-          img: ('@/assets/img/kia-stinger.jpg'),
+          img: ('src/assets/img/kia-stinger.jpg'),
           id: "4",
         },
       ],
