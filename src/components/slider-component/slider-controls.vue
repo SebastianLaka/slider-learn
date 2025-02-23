@@ -1,9 +1,9 @@
 <template>
   <div class="buttons-area">
-    <button @click="clickButton('clickLeft')" class="buttons-area__left">
+    <button @click="$emit('clickLeft')" class="buttons-area__left">
       <img src="@/assets/icons/arrow-left.svg" alt="slider arrow left" />
     </button>
-    <button @click="clickButton('clickRight')" class="buttons-area__right">
+    <button @click="$emit('clickRight')" class="buttons-area__right">
       <img src="@/assets/icons/arrow-right.svg" alt="slider arrow right" />
     </button>
   </div>
@@ -32,14 +32,7 @@
 }
 </style>
 <script>
-
-export default{
-emits:['clickRight', 'clickLeft'],
-methods: {
-    clickButton (event) {
-        this.$emit(event)
-        console.log(`ok ${event}`);
-    },
-}
+export default {
+  emits: ['clickRight', 'clickLeft'],
 }
 </script>

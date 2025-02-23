@@ -1,7 +1,7 @@
 <template>
   <div class="slider-container">
-    <div class="img-area" :style="{ backgroundImage: `url(${ images[currentImage].img})` }">
-      <sliderButtons />
+    <div class="img-area" :style="{ backgroundImage: `url(${images[currentImage].img})` }">
+      <sliderButtons @click-left="prevSlide" @click-right="nextSlide"/>
     </div>
   </div>
 </template>
@@ -34,9 +34,9 @@ body {
 }
 </style>
 <script>
-import sliderButtons from './slider-controls.vue';
-import { ref } from 'vue';
-const currentImage = ref(0);
+import sliderButtons from './slider-controls.vue'
+import { ref } from 'vue'
+const currentImage = ref(0)
 export default {
   components: {
     sliderButtons,
@@ -44,25 +44,33 @@ export default {
   data() {
     return {
       images: [
-      {
-        img: ('src/assets/img/porsche-911-dakkar.jpg'),
-          id: "1",
+        {
+          img: 'src/assets/img/porsche-911-dakkar.jpg',
+          id: '1',
         },
         {
-          img:  ('src/assets/img/dodge-viper.jpg'),
-          id: "2",
+          img: 'src/assets/img/dodge-viper.jpg',
+          id: '2',
         },
         {
-          img: ('src/assets/img/nissan-370z.jpg'),
-          id: "3",
+          img: 'src/assets/img/nissan-370z.jpg',
+          id: '3',
         },
         {
-          img: ('src/assets/img/kia-stinger.jpg'),
-          id: "4",
+          img: 'src/assets/img/kia-stinger.jpg',
+          id: '4',
         },
       ],
-      currentImage
-    };
+      currentImage,
+    }
+  },
+  methods: {
+    prevSlide() {
+      console.log('left click')
+    },
+    nextSlide(){
+      console.log('right click')
+    }
   },
 }
 </script>
