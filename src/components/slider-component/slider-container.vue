@@ -66,14 +66,16 @@ export default {
   },
   methods: {
     nextSlide(){
-      console.log('right click');
       this.currentImage++;
       if (this.currentImage > this.images.length - 1) {
       this.currentImage = 0;
     }
     },
     prevSlide() {
-      console.log('left click');
+      this.currentImage--;
+      if(this.currentImage < 0){
+        this.currentImage = 3;
+      }
     },
   },
 }
