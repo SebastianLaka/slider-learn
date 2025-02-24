@@ -15,8 +15,9 @@
   justify-content: space-between;
   top: 50%;
   width: 100%;
-  height: calc(100% + 0.3%);
+  height: calc(80% - 5%);
   transform: translateY(-50%);
+  z-index: 100;
   &__left,
   &__right {
     padding: 1em 1.5em;

@@ -1,8 +1,9 @@
 <template>
   <div class="slider-container">
     <div class="img-area" :style="{ backgroundImage: `url(${images[currentImage].img})` }">
-      <sliderButtons @click-left="prevSlide" @click-right="nextSlide"/>
+      
     </div>
+    <sliderButtons @click-left="prevSlide" @click-right="nextSlide"/>
   </div>
 </template>
 <style lang="scss">
