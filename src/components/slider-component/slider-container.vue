@@ -37,7 +37,9 @@ body {
 import sliderButtons from './slider-controls.vue'
 import { ref } from 'vue'
 const currentImage = ref(0)
+const firstSlide = 0;
 const lastSlide = 3;
+
 export default {
   components: {
     sliderButtons,
@@ -69,7 +71,7 @@ export default {
     nextSlide(){
       this.currentImage++;
       if (this.currentImage > this.images.length - 1) {
-      this.currentImage = 0;
+      this.currentImage = firstSlide;
     }
     },
     prevSlide() {
