@@ -15,20 +15,20 @@
   justify-content: space-between;
   top: 50%;
   width: 100%;
-  height: calc(80% - 5%);
+  height: calc(80% - 4.75%);
   transform: translateY(-50%);
   z-index: 100;
   &__left,
   &__right {
     padding: 1em 1.5em;
     border: none;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.8);
     cursor: pointer;
     transition: background-color 0.3s ease-in-out;
   }
   &__left:hover,
   &__right:hover {
-    background-color: transparent;
+    background-color: rgba(0, 0, 0, 0.5)
   }
 }
 </style>

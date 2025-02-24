@@ -1,9 +1,13 @@
 <template>
   <div class="slider-container">
-    <div class="img-area" :style="{ backgroundImage: `url(${images[currentImage].img})` }">
-      
-    </div>
-    <sliderButtons @click-left="prevSlide" @click-right="nextSlide"/>
+    <Transition name="slide" mode="out-in">
+      <div 
+        class="img-area" 
+        :key="currentImage" 
+        :style="{ backgroundImage: `url(${images[currentImage].img})` }">
+      </div>
+    </Transition>
+    <sliderButtons @click-left="prevSlide" @click-right="nextSlide" />
   </div>
 </template>
 <style lang="scss">
@@ -32,14 +36,22 @@ body {
       z-index: 100;
     }
   }
+  .slide-enter-active,
+  .slide-leave-active {
+    transition: opacity .2s ease-in-out;
+  }
+  .slide-enter-from,
+  .slide-leave-to {
+    opacity: 0;
+  }
 }
 </style>
 <script>
 import sliderButtons from './slider-controls.vue'
 import { ref } from 'vue'
 const currentImage = ref(0)
-const firstSlide = 0;
-const lastSlide = 3;
+const firstSlide = 0
+const lastSlide = 3
 
 export default {
   components: {
@@ -69,16 +81,16 @@ export default {
     }
   },
   methods: {
-    nextSlide(){
-      this.currentImage++;
+    nextSlide() {
+      this.currentImage++
       if (this.currentImage > this.images.length - 1) {
-      this.currentImage = firstSlide;
-    }
+        this.currentImage = firstSlide
+      }
     },
     prevSlide() {
-      this.currentImage--;
-      if(this.currentImage < 0){
-        this.currentImage = lastSlide;
+      this.currentImage--
+      if (this.currentImage < 0) {
+        this.currentImage = lastSlide
       }
     },
   },
