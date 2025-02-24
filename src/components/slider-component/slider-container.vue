@@ -46,31 +46,35 @@ export default {
       images: [
         {
           img: 'src/assets/img/porsche-911-dakkar.jpg',
-          id: '1',
+          id: 1,
         },
         {
           img: 'src/assets/img/dodge-viper.jpg',
-          id: '2',
+          id: 2,
         },
         {
           img: 'src/assets/img/nissan-370z.jpg',
-          id: '3',
+          id: 3,
         },
         {
           img: 'src/assets/img/kia-stinger.jpg',
-          id: '4',
+          id: 4,
         },
       ],
       currentImage,
     }
   },
   methods: {
-    prevSlide() {
-      console.log('left click')
-    },
     nextSlide(){
-      console.log('right click')
+      console.log('right click');
+      this.currentImage++;
+      if (this.currentImage > this.images.length - 1) {
+      this.currentImage = 0;
     }
+    },
+    prevSlide() {
+      console.log('left click');
+    },
   },
 }
 </script>
