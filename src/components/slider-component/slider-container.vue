@@ -1,6 +1,6 @@
 <template>
   <div class="slider-container">
-    <Transition name="slide" mode="out-in">
+    <Transition name="slide" mode="default">
       <div 
         class="img-area" 
         :key="currentImage" 
@@ -82,15 +82,15 @@ export default {
   },
   methods: {
     nextSlide() {
-      this.currentImage++
+      this.currentImage++;
       if (this.currentImage > this.images.length - 1) {
-        this.currentImage = firstSlide
+        this.currentImage = firstSlide;
       }
     },
     prevSlide() {
-      this.currentImage--
+      this.currentImage--;
       if (this.currentImage < 0) {
-        this.currentImage = lastSlide
+        this.currentImage = lastSlide;
       }
     },
   },
